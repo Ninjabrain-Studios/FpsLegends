@@ -1,9 +1,9 @@
 import { Server } from 'socket.io';
-import { v4 as uuidv4 } from 'uuid';
 import { GameRoom } from '../game/GameRoom';
 import { PlayerState } from '../game/PlayerState';
 import { QueuedPlayer } from './matchmakingService';
-import { MapName, Team, SocketEvents, LOBBY_COUNTDOWN_DURATION } from '../../../shared/constants';
+import { MapName, Team, SocketEvents } from '../../../shared/types';
+import { LOBBY_COUNTDOWN_DURATION } from '../../../shared/constants';
 
 class GameService {
   private activeGames: Map<string, GameRoom> = new Map();
